@@ -1,0 +1,46 @@
+@import "../../styles/variables.css";
+
+.ds-heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: var(--line-tight);
+  letter-spacing: var(--letter-tight);
+  margin: 0;
+  color: var(--color-text);
+}
+
+.ds-heading--hero {
+  font-size: var(--text-hero);
+}
+
+.ds-heading--display {
+  font-size: var(--text-5xl);
+}
+
+.ds-heading--xl {
+  font-size: var(--text-4xl);
+}
+
+.ds-heading--lg {
+  font-size: var(--text-3xl);
+}
+
+.ds-heading--md {
+  font-size: var(--text-2xl);
+}
+
+.ds-heading--sm {
+  font-size: var(--text-xl);
+}
+
+.ds-heading--align-left {
+  text-align: left;
+}
+
+.ds-heading--align-center {
+  text-align: center;
+}
+
+.ds-heading--align-right {
+  text-align: right;
+}

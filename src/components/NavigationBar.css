@@ -1,0 +1,35 @@
+.navigation-bar {
+  position: fixed;
+  top: 2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 9999;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+}
+
+.navigation-bar--visible {
+  animation: navigation-bar 420ms var(--ease) forwards;
+}
+
+@keyframes navigation-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navigation-bar--visible {
+    animation: none;
+    transform: scaleX(1);
+  }
+}

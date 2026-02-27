@@ -1,0 +1,44 @@
+@import "../../styles/variables.css";
+
+.ds-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  transition: box-shadow var(--duration-hover) var(--ease), transform var(--duration-hover) var(--ease);
+}
+
+.ds-card--elevated {
+  box-shadow: var(--shadow-soft);
+}
+
+.ds-card--elevated:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.ds-card--outlined {
+  box-shadow: none;
+  border: 1px solid var(--color-border);
+}
+
+.ds-card--outlined:hover {
+  border-color: var(--color-border-strong);
+}
+
+.ds-card--flat {
+  box-shadow: none;
+}
+
+.ds-card--padding-none {
+  padding: 0;
+}
+
+.ds-card--padding-sm {
+  padding: var(--space-md);
+}
+
+.ds-card--padding-md {
+  padding: var(--space-lg);
+}
+
+.ds-card--padding-lg {
+  padding: var(--space-xl);
+}

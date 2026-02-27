@@ -1,0 +1,34 @@
+.logo-intro-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  pointer-events: none;
+}
+
+.logo-intro-splash-inner {
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+.logo-intro-splash-brand {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+  line-height: 1.1;
+}
+
+.logo-intro-splash-tagline {
+  font-size: var(--text-lg);
+  font-weight: 300;
+  line-height: var(--line-relaxed);
+  color: var(--color-text);
+  opacity: 0.9;
+  margin: 0;
+}

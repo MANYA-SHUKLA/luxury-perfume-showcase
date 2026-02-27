@@ -1,0 +1,29 @@
+@import "../../styles/variables.css";
+
+.ds-section {
+  width: 100%;
+}
+
+.ds-section--default {
+  background: var(--color-bg);
+}
+
+.ds-section--surface {
+  background: var(--color-surface);
+}
+
+.ds-section--muted {
+  background: var(--color-overlay-light);
+}
+
+.ds-section--padding-sm {
+  padding: var(--space-2xl) var(--space-md);
+}
+
+.ds-section--padding-md {
+  padding: var(--space-3xl) var(--space-md);
+}
+
+.ds-section--padding-lg {
+  padding: var(--space-4xl) var(--space-md);
+}

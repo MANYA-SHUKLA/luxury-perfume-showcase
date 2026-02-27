@@ -1,0 +1,96 @@
+.detail-accordion {
+  margin-top: var(--space-xl);
+  border-top: 1px solid rgba(28, 25, 23, 0.1);
+}
+
+.detail-accordion-item {
+  border-bottom: 1px solid rgba(28, 25, 23, 0.08);
+}
+
+.detail-accordion-item:last-child {
+  border-bottom: none;
+}
+
+.detail-accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg) 0;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--duration-hover) var(--ease);
+}
+
+.detail-accordion-trigger:hover {
+  color: var(--color-accent);
+}
+
+.detail-accordion-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.detail-accordion-panel {
+  overflow: hidden;
+}
+
+.detail-accordion-content {
+  padding-bottom: var(--space-lg);
+  font-size: var(--text-base);
+  line-height: var(--line-relaxed);
+  color: var(--color-text);
+  opacity: 0.9;
+}
+
+.detail-accordion-notes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.detail-accordion-note-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.detail-accordion-note-label {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.detail-accordion-dl {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.detail-accordion-row dt {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-xs);
+  opacity: 0.7;
+}
+
+.detail-accordion-row dd {
+  margin: 0;
+}
+
+.detail-accordion-p {
+  margin: 0;
+}

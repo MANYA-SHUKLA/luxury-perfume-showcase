@@ -1,0 +1,144 @@
+.product-detail-story {
+  position: relative;
+}
+
+.story-sticky-hero {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.story-panel {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: var(--space-4xl) var(--space-md) var(--space-3xl);
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to top, var(--color-bg) 0%, transparent 35%);
+}
+
+.story-panel-content {
+  max-width: var(--container-narrow);
+  width: 100%;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.story-panel-content--center {
+  align-self: center;
+  margin-bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 60%);
+  padding: var(--space-2xl);
+  border-radius: var(--radius);
+}
+
+.story-panel-content--narrow {
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.story-panel-content--notes {
+  text-align: left;
+  max-width: var(--container-max);
+}
+
+.story-panel-content--cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.story-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
+}
+
+.story-price {
+  font-size: var(--text-2xl);
+  margin: 0 0 var(--space-sm);
+}
+
+.story-tagline {
+  font-size: var(--text-sm);
+  opacity: 0.9;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-wider);
+}
+
+.story-description {
+  font-size: var(--text-lg);
+  line-height: var(--line-relaxed);
+  margin: 0;
+  opacity: 0.95;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
+}
+
+.story-notes-heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin: 0 0 var(--space-lg);
+  letter-spacing: var(--letter-tight);
+}
+
+.story-notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-lg);
+}
+
+.story-note-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.story-note-label {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-wider);
+  opacity: 0.85;
+}
+
+.story-note-list {
+  font-size: var(--text-sm);
+  line-height: var(--line-normal);
+}
+
+.story-link-details {
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-wider);
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity var(--duration) var(--ease);
+}
+
+.story-link-details:hover {
+  opacity: 0.85;
+}
+
+.story-panel--last {
+  padding-bottom: var(--space-4xl);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-sticky-hero {
+    position: relative;
+    height: 70vh;
+  }
+}

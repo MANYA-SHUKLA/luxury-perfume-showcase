@@ -1,0 +1,114 @@
+.featured {
+  padding: var(--space-4xl) var(--space-md);
+  background: var(--color-bg);
+}
+
+.featured-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.featured-heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  margin: 0 0 var(--space-2xl);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.featured-slider-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.featured-slider-btn {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid rgba(28, 25, 23, 0.12);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: background var(--duration-hover) var(--ease), color var(--duration-hover) var(--ease), border-color var(--duration-hover) var(--ease), transform var(--duration-hover) var(--ease);
+}
+
+.featured-slider-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-surface);
+  border-color: var(--color-accent);
+  transform: scale(1.05);
+}
+
+.featured-slider-btn:active {
+  transform: scale(0.98);
+}
+
+.featured-slider-btn:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.featured-slider {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.featured-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.featured-slider-track {
+  display: flex;
+  gap: 32px;
+  padding: var(--space-sm) 0;
+  width: max-content;
+}
+
+.featured-slider-card {
+  flex: 0 0 320px;
+  width: 320px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+@media (max-width: 900px) {
+  .featured-slider-card {
+    flex: 0 0 280px;
+    width: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .featured-slider-card {
+    flex: 0 0 260px;
+    width: 260px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-slider {
+    scroll-behavior: auto;
+  }
+}

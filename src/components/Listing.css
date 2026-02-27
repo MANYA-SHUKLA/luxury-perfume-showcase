@@ -1,0 +1,195 @@
+.listing-page {
+  padding-bottom: var(--space-4xl);
+}
+
+.listing-page-header {
+  padding: var(--space-3xl) var(--space-md) var(--space-2xl);
+  text-align: center;
+  animation: fadeInUp var(--duration-slow) var(--ease-out) both;
+}
+
+.listing-page-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  margin: 0 0 var(--space-sm);
+  letter-spacing: 0.02em;
+}
+
+.listing-page-desc {
+  font-size: var(--text-lg);
+  margin: 0;
+  opacity: 0.85;
+}
+
+.listing {
+  padding: 0 var(--space-md) var(--space-3xl);
+}
+
+.listing-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.listing-toolbar {
+  display: flex;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.listing-search-wrap {
+  flex: 1;
+  min-width: 200px;
+  max-width: 320px;
+}
+
+.listing-search {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  border: 1px solid rgba(28, 25, 23, 0.15);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+
+.listing-search::placeholder {
+  color: var(--color-text);
+  opacity: 0.5;
+}
+
+.listing-search:hover,
+.listing-search:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-glow);
+  outline: none;
+}
+
+.listing-filters,
+.listing-sort {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.listing-label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.listing-select {
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  border: 1px solid rgba(28, 25, 23, 0.15);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+
+.listing-select:hover,
+.listing-select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-glow);
+  outline: none;
+}
+
+.listing-select:focus-visible,
+.listing-search:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-glow);
+}
+
+.listing-count {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  opacity: 0.75;
+  margin: 0 0 var(--space-md);
+}
+
+.listing-empty {
+  text-align: center;
+  padding: var(--space-3xl);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.listing-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid rgba(28, 25, 23, 0.08);
+}
+
+.listing-pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.listing-pagination-btn {
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--text-sm);
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid rgba(28, 25, 23, 0.15);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color var(--duration-hover) var(--ease), background var(--duration-hover) var(--ease), color var(--duration-hover) var(--ease);
+}
+
+.listing-pagination-btn:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  background: var(--color-bg);
+}
+
+.listing-pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.listing-pagination-btn--num {
+  min-width: 40px;
+}
+
+.listing-pagination-btn--current {
+  background: var(--color-text);
+  color: var(--color-surface);
+  border-color: var(--color-text);
+}
+
+.listing-pagination-btn--current:hover:not(:disabled) {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-surface);
+}

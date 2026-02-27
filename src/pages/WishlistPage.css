@@ -1,0 +1,91 @@
+.wishlist-page {
+  padding: var(--space-2xl) var(--space-md) var(--space-4xl);
+}
+
+.wishlist-page-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.wishlist-page-header {
+  padding-bottom: var(--space-2xl);
+}
+
+.wishlist-page-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  margin: 0 0 var(--space-sm);
+  letter-spacing: 0.02em;
+}
+
+.wishlist-page-desc {
+  font-size: var(--text-lg);
+  margin: 0;
+  opacity: 0.85;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+@media (max-width: 900px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wishlist-empty {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-3xl);
+}
+
+.wishlist-empty-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  margin: 0 0 var(--space-md);
+}
+
+.wishlist-empty-desc {
+  font-size: var(--text-base);
+  line-height: var(--line-relaxed);
+  margin: 0 0 var(--space-2xl);
+  max-width: 360px;
+  opacity: 0.9;
+}
+
+.wishlist-empty-cta {
+  display: inline-block;
+  padding: var(--space-md) var(--space-xl);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-surface);
+  background-color: var(--color-text);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  transition: background-color var(--duration-hover) var(--ease), color var(--duration-hover) var(--ease), transform var(--duration-hover) var(--ease), box-shadow var(--duration-hover) var(--ease);
+}
+
+.wishlist-empty-cta:hover {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}

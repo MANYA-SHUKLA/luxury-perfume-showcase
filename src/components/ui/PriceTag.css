@@ -1,0 +1,22 @@
+@import "../../styles/variables.css";
+
+.ds-price {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.ds-price-currency {
+  margin-right: 0.1em;
+}
+
+.ds-price--sm {
+  font-size: var(--text-sm);
+}
+
+.ds-price--md {
+  font-size: var(--text-base);
+}
+
+.ds-price--lg {
+  font-size: var(--text-lg);
+}

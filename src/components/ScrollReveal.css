@@ -1,0 +1,13 @@
+.scroll-reveal {
+  overflow: hidden;
+}
+
+.scroll-reveal-inner {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal-inner {
+    will-change: auto;
+  }
+}

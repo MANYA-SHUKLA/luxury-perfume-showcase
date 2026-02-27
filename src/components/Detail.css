@@ -1,0 +1,195 @@
+.detail {
+  padding: var(--space-2xl) var(--space-md) var(--space-4xl);
+}
+
+.detail-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+  animation: fadeIn 0.5s var(--ease-out) both;
+}
+
+.detail-page-breadcrumbs {
+  padding: var(--space-lg) var(--space-md) 0;
+}
+
+.detail-page-breadcrumbs-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.detail-page-view-toggle {
+  display: flex;
+  gap: 0;
+  background: var(--color-overlay-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-2xs);
+}
+
+.detail-page-view-tab {
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-wider);
+  color: var(--color-text-muted);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--duration) var(--ease), color var(--duration) var(--ease);
+}
+
+.detail-page-view-tab:hover {
+  color: var(--color-text);
+}
+
+.detail-page-view-tab--active {
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-xs);
+}
+
+.detail-media {
+  position: sticky;
+  top: var(--space-lg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: box-shadow var(--duration-hover) var(--ease);
+}
+
+.detail-media:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.detail-gallery-placeholder {
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(28, 25, 23, 0.04);
+  border-radius: var(--radius);
+}
+
+.detail-3d-cta {
+  margin-top: var(--space-md);
+  padding: 0 var(--space-xs);
+}
+
+.detail-content {
+  padding-top: var(--space-sm);
+  animation: fadeInUp var(--duration-slow) var(--ease-out) 0.1s both;
+}
+
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.detail-wishlist,
+.detail-share {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--text-sm);
+  font-family: var(--font-body);
+  font-weight: 500;
+  border: 1px solid rgba(28, 25, 23, 0.2);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color var(--duration-hover) var(--ease), background var(--duration-hover) var(--ease), color var(--duration-hover) var(--ease);
+}
+
+.detail-wishlist::before,
+.detail-share::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  transition: transform 0.35s var(--ease);
+  pointer-events: none;
+}
+
+.detail-wishlist:hover,
+.detail-share:hover {
+  border-color: var(--color-accent);
+  background: var(--color-bg);
+}
+
+.detail-wishlist:hover::before,
+.detail-share:hover::before {
+  transform: translateX(250%);
+}
+
+.detail-wishlist--active {
+  color: #c0392b;
+  border-color: rgba(192, 57, 43, 0.3);
+}
+
+.detail-wishlist--active:hover {
+  border-color: #c0392b;
+  background: rgba(192, 57, 43, 0.06);
+}
+
+.detail-wishlist:active,
+.detail-share:active {
+  transform: scale(var(--active-scale));
+}
+
+.detail-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  margin: 0 0 var(--space-md);
+  letter-spacing: 0.02em;
+  line-height: var(--line-tight);
+}
+
+.detail-price {
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  margin: 0 0 var(--space-xl);
+}
+
+.detail-description {
+  font-size: var(--text-base);
+  line-height: var(--line-relaxed);
+  margin: 0 0 var(--space-2xl);
+}
+
+@media (max-width: 768px) {
+  .detail-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .detail-media {
+    position: static;
+  }
+
+  .detail-title {
+    font-size: var(--text-3xl);
+  }
+}

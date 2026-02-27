@@ -1,0 +1,77 @@
+.signature-collection {
+  padding: var(--space-4xl) var(--space-md);
+  background: var(--color-surface);
+}
+
+.signature-collection-inner {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.signature-collection-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+  margin: 0 0 var(--space-sm);
+  letter-spacing: 0.02em;
+}
+
+.signature-collection-desc {
+  font-size: var(--text-lg);
+  line-height: var(--line-relaxed);
+  margin: 0 0 var(--space-2xl);
+  opacity: 0.9;
+}
+
+.signature-collection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+@media (min-width: 600px) {
+  .signature-collection-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.signature-collection-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-text);
+  transition: background var(--duration-hover) var(--ease), color var(--duration-hover) var(--ease), transform var(--duration-hover) var(--ease);
+}
+
+.signature-collection-item:hover {
+  background: var(--color-accent);
+  color: var(--color-surface);
+  transform: translateY(-2px);
+}
+
+.signature-collection-arrow {
+  opacity: 0.8;
+  font-size: 1.25rem;
+}
+
+.signature-collection-cta {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  transition: opacity var(--duration-hover) var(--ease);
+}
+
+.signature-collection-cta:hover {
+  opacity: 0.85;
+}
