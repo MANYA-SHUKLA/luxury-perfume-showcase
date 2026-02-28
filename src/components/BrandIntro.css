@@ -2,13 +2,11 @@
   padding: var(--space-3xl) var(--space-md);
   background: var(--color-surface);
 }
-
 .brand-intro-inner {
   max-width: var(--container-narrow);
   margin: 0 auto;
   animation: fadeInUp var(--duration-slow) var(--ease-out) 0.2s both;
 }
-
 .brand-intro-text {
   font-size: var(--text-lg);
   line-height: var(--line-relaxed);
