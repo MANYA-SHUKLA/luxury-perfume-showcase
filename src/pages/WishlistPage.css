@@ -1,7 +1,6 @@
 .wishlist-page {
   padding: var(--space-2xl) var(--space-md) var(--space-4xl);
 }
-
 .wishlist-page-inner {
   max-width: var(--container-max);
   margin: 0 auto;
