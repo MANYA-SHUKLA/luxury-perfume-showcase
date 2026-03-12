@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react";
-
 const STORAGE_KEY = "sillage-theme";
 
 const ThemeCtx = createContext(null);
