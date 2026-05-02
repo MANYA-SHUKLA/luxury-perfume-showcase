@@ -1,6 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
 import "./BrandIntro.css";
-
 export default function BrandIntro() {
   return (
     <section className="brand-intro">
