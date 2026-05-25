@@ -1,5 +1,4 @@
 import StorySection from "./StorySection";
-
 export default function BrandPhilosophy() {
   return (
     <StorySection id="philosophy" title="Our philosophy">
