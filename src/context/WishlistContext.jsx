@@ -1,6 +1,5 @@
 import { createContext, useContext } from "react";
 import { useWishlist } from "../hooks/useWishlist";
-
 const WishlistCtx = createContext(null);
 
 export function WishlistProvider({ children }) {
