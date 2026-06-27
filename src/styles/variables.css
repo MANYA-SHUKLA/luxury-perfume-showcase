@@ -10,7 +10,6 @@
   --color-border-strong: rgba(28, 25, 23, 0.2);
   --color-overlay: rgba(28, 25, 23, 0.5);
   --color-overlay-light: rgba(28, 25, 23, 0.06);
-
   --gradient-hero: linear-gradient(135deg, #f8f4ef 0%, #ebe4d9 50%, #e8dfd0 100%);
   --gradient-overlay: linear-gradient(to top, rgba(28, 25, 23, 0.4) 0%, transparent 50%);
 
